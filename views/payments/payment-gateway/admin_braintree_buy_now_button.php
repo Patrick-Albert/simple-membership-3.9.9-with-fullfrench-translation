@@ -14,8 +14,8 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
     ?>
 
     <div class="swpm-orange-box">
-        View the <a target="_blank" href="https://simple-membership-plugin.com/create-braintree-buy-now-button-for-membership-payment/">documentation</a>&nbsp;
-        to learn how to create and use a Braintree Buy Now payment button.
+    <?php echo SwpmUtils::_('View the '); ?><a target="_blank" href="https://simple-membership-plugin.com/create-braintree-buy-now-button-for-membership-payment/">documentation</a>&nbsp;
+    <?php echo SwpmUtils::_(' to learn how to create and use a Braintree Buy Now payment button.'); ?>
     </div>
 
     <div class="postbox">
@@ -34,7 +34,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                             <th scope="row"><?php echo SwpmUtils::_('Button ID'); ?></th>
                             <td>
                                 <input type="text" size="10" name="button_id" value="<?php echo $bt_opts['button_id']; ?>" readonly required />
-                                <p class="description">This is the ID of this payment button. It is automatically generated for you and it cannot be changed.</p>
+                                <p class="description"><?php echo SwpmUtils::_('This is the ID of this payment button. It is automatically generated for you and it cannot be changed.'); ?></p>
                             </td>
                         </tr>
                     <?php } ?>
@@ -42,7 +42,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Button Title'); ?></th>
                         <td>
                             <input type="text" size="50" name="button_name" value="<?php echo ($is_edit_mode ? $bt_opts['button_name'] : ''); ?>" required />
-                            <p class="description">Give this membership payment button a name. Example: Gold membership payment</p>
+                            <p class="description"><?php echo SwpmUtils::_('Give this membership payment button a name. Example: Gold membership payment'); ?></p>
                         </td>
                     </tr>
 
@@ -52,7 +52,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                             <select id="membership_level_id" name="membership_level_id">
                                 <?php echo ($is_edit_mode ? SwpmUtils::membership_level_dropdown($bt_opts['membership_level_id']) : SwpmUtils::membership_level_dropdown()); ?>
                             </select>
-                            <p class="description">Select the membership level this payment button is for.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the membership level this payment button is for.'); ?></p>
                         </td>
                     </tr>
 
@@ -60,7 +60,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Payment Amount'); ?></th>
                         <td>
                             <input type="text" size="6" name="payment_amount" value="<?php echo ($is_edit_mode ? $bt_opts['payment_amount'] : ''); ?>" required />
-                            <p class="description">Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).'); ?></p>
                         </td>
                     </tr>
 
@@ -72,7 +72,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Merchant ID'); ?></th>
                         <td>
                             <input type="text" size="50" name="braintree_merchant_acc_id" value="<?php echo ($is_edit_mode ? $bt_opts['braintree_merchant_acc_id'] : ''); ?>" required/>
-                            <p class="description">Enter you Braintree Merchant ID.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter you Braintree Merchant ID.'); ?></p>
                         </td>
                     </tr>
 
@@ -80,14 +80,14 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Public Key'); ?></th>
                         <td>
                             <input type="text" size="50" name="braintree_public_key" value="<?php echo ($is_edit_mode ? $bt_opts['braintree_public_key'] : ''); ?>" required />
-                            <p class="description">Enter your Braintree public key.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your Braintree public key.'); ?></p>
                         </td>
                     </tr>                    
                     <tr valign="top">
                         <th scope="row"><?php echo SwpmUtils::_('Private Key'); ?></th>
                         <td>
                             <input type="text" size="50" name="braintree_private_key" value="<?php echo ($is_edit_mode ? $bt_opts['braintree_private_key'] : ''); ?>" required />
-                            <p class="description">Enter your Braintree private key.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your Braintree private key.'); ?></p>
                         </td>
                     </tr>
 
@@ -95,12 +95,12 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Merchant Account ID'); ?></th>
                         <td>
                             <input type="text" size="50" name="braintree_merchant_acc_name" value="<?php echo ($is_edit_mode ? $bt_opts['braintree_merchant_acc_name'] : ''); ?>" />
-                            <p class="description">Enter your Braintree Merchant Account ID (This is different than the Merchant ID you specified above). Please note currency depends on the Merchant Account ID you specify. Leave empty to use the default one.
+                            <p class="description"><?php echo SwpmUtils::_('Enter your Braintree Merchant Account ID (This is different than the Merchant ID you specified above). Please note currency depends on the Merchant Account ID you specify. Leave empty to use the default one.'); ?>
                                 <?php
                                 if ($is_edit_mode) {
                                     if (isset($bt_opts['currency_code']) && $bt_opts['currency_code'] != '') {
                                         ?>
-                                        <br />The currency for this button is set to: <strong><?php echo $bt_opts['currency_code']; ?></strong>
+                                        <br /><?php echo SwpmUtils::_('The currency for this button is set to: '); ?><strong><?php echo $bt_opts['currency_code']; ?></strong>
                                         <?php
                                     }
                                 }
@@ -117,7 +117,7 @@ function render_save_edit_braintree_button_interface($bt_opts, $is_edit_mode = f
                         <th scope="row"><?php echo SwpmUtils::_('Return URL'); ?></th>
                         <td>
                             <input type="text" size="100" name="return_url" value="<?php echo ($is_edit_mode ? $bt_opts['return_url'] : ''); ?>" />
-                            <p class="description">This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.</p>
+                            <p class="description"><?php echo SwpmUtils::_('This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.'); ?></p>
                         </td>
                     </tr>
 

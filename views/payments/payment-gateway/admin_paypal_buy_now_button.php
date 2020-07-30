@@ -8,8 +8,8 @@ function swpm_create_new_pp_buy_now_button() {
     ?>
 
     <div class="swpm-orange-box">
-        View the <a target="_blank" href="https://simple-membership-plugin.com/create-paypal-buy-now-button-inside-the-simple-membership-plugin/">documentation</a>&nbsp;
-        to learn how to create a PayPal Buy Now payment button and use it.
+    <?php echo SwpmUtils::_('View the '); ?><a target="_blank" href="https://simple-membership-plugin.com/create-paypal-buy-now-button-inside-the-simple-membership-plugin/">documentation</a>&nbsp;
+    <?php echo SwpmUtils::_(' to learn how to create a PayPal Buy Now payment button and use it.'); ?>
     </div>
 
     <div class="postbox">
@@ -26,7 +26,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('Button Title'); ?></th>
                         <td>
                             <input type="text" size="50" name="button_name" value="" required />
-                            <p class="description">Give this membership payment button a name. Example: Gold membership payment</p>
+                            <p class="description"><?php echo SwpmUtils::_('Give this membership payment button a name. Example: Gold membership payment'); ?></p>
                         </td>
                     </tr>
 
@@ -44,7 +44,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('Payment Amount'); ?></th>
                         <td>
                             <input type="text" size="6" name="payment_amount" value="" required />
-                            <p class="description">Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).'); ?></p>
                         </td>
                     </tr>
 
@@ -84,7 +84,7 @@ function swpm_create_new_pp_buy_now_button() {
                                 <option value="TRY">Turkish Lira</option>
                                 <option value="VND">Vietnamese Dong</option>
                             </select>
-                            <p class="description">Select the currency for this payment button.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the currency for this payment button.'); ?></p>
                         </td>
                     </tr>
 
@@ -92,7 +92,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('Return URL'); ?></th>
                         <td>
                             <input type="text" size="100" name="return_url" value="" />
-                            <p class="description">This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.</p>
+                            <p class="description"><?php echo SwpmUtils::_('This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.'); ?></p>
                         </td>
                     </tr>
 
@@ -100,7 +100,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('PayPal Email'); ?></th>
                         <td>
                             <input type="text" size="50" name="paypal_email" value="" required />
-                            <p class="description">Enter your PayPal email address. The payment will go to this PayPal account.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your PayPal email address. The payment will go to this PayPal account.'); ?></p>
                         </td>
                     </tr>                    
 
@@ -108,7 +108,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('Button Image URL'); ?></th>
                         <td>
                             <input type="text" size="100" name="button_image_url" value="" />
-                            <p class="description">If you want to customize the look of the button using an image then enter the URL of the image.</p>
+                            <p class="description"><?php echo SwpmUtils::_('If you want to customize the look of the button using an image then enter the URL of the image.'); ?></p>
                         </td>
                     </tr>
 
@@ -116,7 +116,7 @@ function swpm_create_new_pp_buy_now_button() {
                         <th scope="row"><?php echo SwpmUtils::_('Custom Checkout Page Logo Image'); ?></th>
                         <td>
                             <input type="text" size="100" name="checkout_logo_image_url" value="" />
-                            <p class="description">Specify an image URL if you want to customize the paypal checkout page with a custom logo/image. The image URL must be a "https" URL.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Specify an image URL if you want to customize the paypal checkout page with a custom logo/image. The image URL must be a "https" URL.'); ?></p>
                         </td>
                     </tr>
                     
@@ -234,7 +234,7 @@ function swpm_edit_pp_buy_now_button() {
                             <select id="membership_level_id" name="membership_level_id">
                                 <?php echo SwpmUtils::membership_level_dropdown($membership_level_id); ?>
                             </select>
-                            <p class="description">Select the membership level this payment button is for.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the membership level this payment button is for.'); ?></p>
                         </td>
                     </tr>
 

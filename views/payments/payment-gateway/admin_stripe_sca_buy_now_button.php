@@ -21,8 +21,8 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 	?>
 
 <div class="swpm-orange-box">
-	View the <a target="_blank" href="https://simple-membership-plugin.com/sca-compliant-stripe-buy-now-button/">documentation</a>&nbsp;
-	to learn how to create a Stripe Buy Now payment button and use it.
+<?php echo SwpmUtils::_( 'View the ' ); ?><a target="_blank" href="https://simple-membership-plugin.com/sca-compliant-stripe-buy-now-button/">documentation</a>&nbsp;
+	<?php echo SwpmUtils::_( ' to learn how to create a Stripe Buy Now payment button and use it.' ); ?>
 </div>
 
 <div class="postbox">
@@ -39,7 +39,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 					<th scope="row"><?php echo SwpmUtils::_( 'Button Title' ); ?></th>
 					<td>
 						<input type="text" size="50" name="button_name" value="" required />
-						<p class="description">Give this membership payment button a name. Example: Gold membership payment</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Give this membership payment button a name. Example: Gold membership payment' ); ?></p>
 					</td>
 				</tr>
 
@@ -49,7 +49,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 						<select id="membership_level_id" name="membership_level_id">
 							<?php echo SwpmUtils::membership_level_dropdown(); ?>
 						</select>
-						<p class="description">Select the membership level this payment button is for.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Select the membership level this payment button is for.' ); ?></p>
 					</td>
 				</tr>
 
@@ -57,7 +57,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 					<th scope="row"><?php echo SwpmUtils::_( 'Payment Amount' ); ?></th>
 					<td>
 						<input type="text" size="6" name="payment_amount" value="" required />
-						<p class="description">Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).' ); ?></p>
 					</td>
 				</tr>
 
@@ -96,7 +96,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 							<option value="TRY">Turkish Lira</option>
 							<option value="VND">Vietnamese Dong</option>
 						</select>
-						<p class="description">Select the currency for this payment button.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Select the currency for this payment button.' ); ?></p>
 					</td>
 				</tr>
 
@@ -118,28 +118,28 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 					<th scope="row"><?php echo SwpmUtils::_( 'Test Publishable Key' ); ?></th>
 					<td>
 						<input type="text" size="50" name="stripe_test_publishable_key" value="" required />
-						<p class="description">Enter your Stripe test publishable key.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enter your Stripe test publishable key.' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><?php echo SwpmUtils::_( 'Test Secret Key' ); ?></th>
 					<td>
 						<input type="text" size="50" name="stripe_test_secret_key" value="" required />
-						<p class="description">Enter your Stripe test secret key.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enter your Stripe test secret key.' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><?php echo SwpmUtils::_( 'Live Publishable Key' ); ?></th>
 					<td>
 						<input type="text" size="50" name="stripe_live_publishable_key" value="" required />
-						<p class="description">Enter your Stripe live publishable key.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enter your Stripe live publishable key.' ); ?></p>
 					</td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><?php echo SwpmUtils::_( 'Live Secret Key' ); ?></th>
 					<td>
 						<input type="text" size="50" name="stripe_live_secret_key" value="" required />
-						<p class="description">Enter your Stripe live secret key.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enter your Stripe live secret key.' ); ?></p>
 					</td>
 				</tr>
 
@@ -153,7 +153,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 					<th scope="row"><?php echo SwpmUtils::_( 'Collect Customer Address' ); ?></th>
 					<td>
 						<input type="checkbox" name="collect_address" value="1" />
-						<p class="description">Enable this option if you want to collect customer address during Stripe checkout.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'Enable this option if you want to collect customer address during Stripe checkout.' ); ?></p>
 					</td>
 				</tr>
 
@@ -161,7 +161,7 @@ function swpm_create_new_stripe_sca_buy_now_button() {
 					<th scope="row"><?php echo SwpmUtils::_( 'Return URL' ); ?></th>
 					<td>
 						<input type="text" size="100" name="return_url" value="" />
-						<p class="description">This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.</p>
+						<p class="description"><?php echo SwpmUtils::_( 'This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.' ); ?></p>
 					</td>
 				</tr>
 

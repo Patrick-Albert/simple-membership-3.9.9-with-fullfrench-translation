@@ -13,8 +13,8 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
     ?>
 
     <div class="swpm-orange-box">
-        View the <a target="_blank" href="https://simple-membership-plugin.com/creating-paypal-smart-checkout-buttons-for-membership-payment/">documentation</a>&nbsp;
-        to learn how to create and use a PayPal Smart Checkout payment button.
+    <?php echo SwpmUtils::_('View the '); ?><a target="_blank" href="https://simple-membership-plugin.com/creating-paypal-smart-checkout-buttons-for-membership-payment/">documentation</a>&nbsp;
+    <?php echo SwpmUtils::_(' to learn how to create and use a PayPal Smart Checkout payment button.'); ?>
     </div>
 
     <div class="postbox">
@@ -41,7 +41,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Button Title'); ?></th>
                         <td>
                             <input type="text" size="50" name="button_name" value="<?php echo ($is_edit_mode ? $bt_opts['button_name'] : ''); ?>" required />
-                            <p class="description">Give this membership payment button a name. Example: Gold membership payment</p>
+                            <p class="description"><?php echo SwpmUtils::_('Give this membership payment button a name. Example: Gold membership payment'); ?></p>
                         </td>
                     </tr>
 
@@ -51,7 +51,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                             <select id="membership_level_id" name="membership_level_id">
                                 <?php echo ($is_edit_mode ? SwpmUtils::membership_level_dropdown($bt_opts['membership_level_id']) : SwpmUtils::membership_level_dropdown()); ?>
                             </select>
-                            <p class="description">Select the membership level this payment button is for.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the membership level this payment button is for.'); ?></p>
                         </td>
                     </tr>
 
@@ -59,7 +59,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Payment Amount'); ?></th>
                         <td>
                             <input type="text" size="6" name="payment_amount" value="<?php echo ($is_edit_mode ? $bt_opts['payment_amount'] : ''); ?>" required />
-                            <p class="description">Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).'); ?></p>
                         </td>
                     </tr>
 
@@ -99,7 +99,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                                 <option value="TRY" <?php echo (isset($bt_opts['payment_currency']) && $bt_opts['payment_currency'] == 'TRY') ? 'selected="selected"' : ''; ?>>Turkish Lira</option>
                                 <option value="VND" <?php echo (isset($bt_opts['payment_currency']) && $bt_opts['payment_currency'] == 'VND') ? 'selected="selected"' : ''; ?>>Vietnamese Dong</option>
                             </select>
-                            <p class="description">Select the currency for this payment button.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the currency for this payment button.'); ?></p>
                         </td>
                     </tr>
 
@@ -111,7 +111,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Live Client ID'); ?></th>
                         <td>
                             <input type="text" size="100" name="pp_smart_checkout_live_id" value="<?php echo ($is_edit_mode ? $bt_opts['pp_smart_checkout_live_id'] : ''); ?>" required/>
-                            <p class="description">Enter your live Client ID.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your live Client ID.'); ?></p>
                         </td>
                     </tr>
 
@@ -119,7 +119,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Live Secret'); ?></th>
                         <td>
                             <input type="text" size="100" name="pp_smart_checkout_live_sec" value="<?php echo ($is_edit_mode ? $bt_opts['pp_smart_checkout_live_sec'] : ''); ?>" required/>
-                            <p class="description">Enter your live Secret.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your live Secret.'); ?></p>
                         </td>
                     </tr>
 
@@ -127,7 +127,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Sandbox Client ID'); ?></th>
                         <td>
                             <input type="text" size="100" name="pp_smart_checkout_test_id" value="<?php echo ($is_edit_mode ? $bt_opts['pp_smart_checkout_test_id'] : ''); ?>" required/>
-                            <p class="description">Enter your sandbox Client ID.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your sandbox Client ID.'); ?></p>
                         </td>
                     </tr>
 
@@ -135,7 +135,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Sandbox Secret'); ?></th>
                         <td>
                             <input type="text" size="100" name="pp_smart_checkout_test_sec" value="<?php echo ($is_edit_mode ? $bt_opts['pp_smart_checkout_test_sec'] : ''); ?>" required/>
-                            <p class="description">Enter your sandbox Secret.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter your sandbox Secret.'); ?></p>
                         </td>
                     </tr>
 
@@ -204,7 +204,7 @@ function render_save_edit_pp_smart_checkout_button_interface($bt_opts, $is_edit_
                         <th scope="row"><?php echo SwpmUtils::_('Return URL'); ?></th>
                         <td>
                             <input type="text" size="100" name="return_url" value="<?php echo ($is_edit_mode ? $bt_opts['return_url'] : ''); ?>" />
-                            <p class="description">This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.</p>
+                            <p class="description"><?php echo SwpmUtils::_('This is the URL the user will be redirected to after a successful payment. Enter the URL of your Thank You page here.'); ?></p>
                         </td>
                     </tr>
 

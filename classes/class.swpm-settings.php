@@ -317,7 +317,7 @@ class SwpmSettings {
 			'email-misc-settings',
 			array(
 				'item'    => 'email-from',
-				'message' => 'This value will be used as the sender\'s address for the emails. Example value: Your Name &lt;sales@your-domain.com&gt;',
+				'message' => SwpmUtils::_('This value will be used as the sender\'s address for the emails. Example value: Your Name &lt;sales@your-domain.com&gt;'),
 			)
 		);
 
@@ -329,7 +329,7 @@ class SwpmSettings {
 			'email-misc-settings',
 			array(
 				'item'    => 'email-enable-html',
-				'message' => 'Enables HTML support in emails. We recommend using plain text (non HTML) email as it has better email delivery rate.',
+				'message' => SwpmUtils::_('Enables HTML support in emails. We recommend using plain text (non HTML) email as it has better email delivery rate.'),
 			)
 		);
 

@@ -41,23 +41,23 @@ class SwpmMembershipLevels extends WP_List_Table {
     function column_default($item, $column_name) {
         if ($column_name == 'valid_for') {
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::NO_EXPIRY) {
-                return 'No Expiry';
+                return SwpmUtils::_('No Expiry');
             }
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::FIXED_DATE) {
                 $formatted_date = SwpmUtils::get_formatted_date_according_to_wp_settings($item['subscription_period']);
                 return $formatted_date;
             }
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::DAYS) {
-                return $item['subscription_period'] . " Day(s)";
+                return $item['subscription_period'] . SwpmUtils::_(" Day(s)");
             }
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::WEEKS) {
-                return $item['subscription_period'] . " Week(s)";
+                return $item['subscription_period'] . SwpmUtils::_(" Week(s)");
             }
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::MONTHS) {
-                return $item['subscription_period'] . " Month(s)";
+                return $item['subscription_period'] . SwpmUtils::_(" Month(s)");
             }
             if ($item['subscription_duration_type'] == SwpmMembershipLevel::YEARS) {
-                return $item['subscription_period'] . " Year(s)";
+                return $item['subscription_period'] . SwpmUtils::_(" Year(s)");
             }
         }
         if ($column_name == 'role') {

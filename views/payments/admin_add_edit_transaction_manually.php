@@ -75,7 +75,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Email Address'); ?></th>
                         <td>
                             <input type="text" size="70" name="email_address" value="" required />
-                            <p class="description">Email address of the customer.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Email address of the customer.'); ?></p>
                         </td>
                     </tr>
 
@@ -83,7 +83,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('First Name'); ?></th>
                         <td>
                             <input type="text" size="50" name="first_name" value="" required />
-                            <p class="description">First name of the customer.</p>
+                            <p class="description"><?php echo SwpmUtils::_('First name of the customer.'); ?></p>
                         </td>
                     </tr>
 
@@ -91,7 +91,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Last Name'); ?></th>
                         <td>
                             <input type="text" size="50" name="last_name" value="" required />
-                            <p class="description">Last name of the customer.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Last name of the customer.'); ?></p>
                         </td>
                     </tr>
 
@@ -99,7 +99,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Member ID'); ?></th>
                         <td>
                             <input type="text" size="20" name="member_id" value="" />
-                            <p class="description">The Member ID number of the member's profile that corresponds to this transaction.</p>
+                            <p class="description"><?php echo SwpmUtils::_('The Member ID number of the member\'s profile that corresponds to this transaction.'); ?></p>
                         </td>
                     </tr>
 
@@ -109,7 +109,7 @@ function swpm_show_add_new_txn_form(){
                             <select id="membership_level_id" name="membership_level_id">
                                 <?php echo SwpmUtils::membership_level_dropdown(); ?>
                             </select>
-                            <p class="description">Select the membership level this transaction is for.</p>
+                            <p class="description"><?php echo SwpmUtils::_('Select the membership level this transaction is for.'); ?></p>
                         </td>
                     </tr>
 
@@ -117,7 +117,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Amount'); ?></th>
                         <td>
                             <input type="text" size="10" name="payment_amount" value="" required />
-                            <p class="description">Enter the payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).</p>
+                            <p class="description"><?php echo SwpmUtils::_('Enter the payment amount. Example values: 10.00 or 19.50 or 299.95 etc (do not put currency symbol).'); ?></p>
                         </td>
                     </tr>
 
@@ -125,7 +125,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Date'); ?></th>
                         <td>
                             <input type="text" size="20" name="txn_date" value="" />
-                            <p class="description">The date for this transaction. Use format YYYY-MM-DD.</p>
+                            <p class="description"><?php echo SwpmUtils::_('The date for this transaction. Use format YYYY-MM-DD.'); ?></p>
                         </td>
                     </tr>
 
@@ -133,7 +133,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Transaction ID'); ?></th>
                         <td>
                             <input type="text" size="50" name="txn_id" value="" />
-                            <p class="description">The unique transaction ID of this transaction so you can identify it easily.</p>
+                            <p class="description"><?php echo SwpmUtils::_('The unique transaction ID of this transaction so you can identify it easily.'); ?></p>
                         </td>
                     </tr>
 
@@ -141,7 +141,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Subscriber ID'); ?></th>
                         <td>
                             <input type="text" size="50" name="subscriber_id" value="" />
-                            <p class="description">The subscriber ID (if any) from the member's profile.</p>
+                            <p class="description"><?php echo SwpmUtils::_('The subscriber ID (if any) from the member\'s profile.'); ?></p>
                         </td>
                     </tr>
 
@@ -149,7 +149,7 @@ function swpm_show_add_new_txn_form(){
                         <th scope="row"><?php echo SwpmUtils::_('Status/Note'); ?></th>
                         <td>
                             <input type="text" size="50" name="txn_status" value="" />
-                            <p class="description">A status value for this transaction. This will go to the Status/Note column of the transaction record.</p>
+                            <p class="description"><?php echo SwpmUtils::_('A status value for this transaction. This will go to the Status/Note column of the transaction record.'); ?></p>
                         </td>
                     </tr>
 
